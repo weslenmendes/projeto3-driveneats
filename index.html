@@ -16,8 +16,10 @@
   </head>
   <body>
     <header>
-      <h1>Driven Eats</h1>
-      <p>Sua comida em 6 minutos</p>
+      <div class="topbar">
+        <h1>Driven Eats</h1>
+        <p>Sua comida em 6 minutos</p>
+      </div>
     </header>
 
     <main>
@@ -27,21 +29,21 @@
           <div class="cards__item" data-identifier="food-option">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <p class="legend">Um pouco de batata, um pouco de salada</p>
             <p class="value" data-identifier="food-price">R$ 14,50</p>
           </div>
 
           <div class="cards__item" data-identifier="food-option">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <p class="legend">Um pouco de batata, um pouco de salada</p>
             <p class="value" data-identifier="food-price">R$ 14,50</p>
           </div>
 
           <div class="cards__item" data-identifier="food-option">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <p class="legend">Um pouco de batata, um pouco de salada</p>
             <p class="value" data-identifier="food-price">R$ 14,50</p>
           </div>
         </div>
@@ -98,12 +100,15 @@
           </div>
         </div>
       </section>
-
-      <footer>
-        <a href="#" class="btn disabled"
-          >Selecione os 3 itens para fechar o pedido</a
-        >
-      </footer>
     </main>
+
+    <footer>
+      <div>
+        <a href="#" class="btn disabled">
+          Selecione os 3 itens <br />
+          para fechar o pedido
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
