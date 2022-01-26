@@ -26,7 +26,7 @@
       <section>
         <h2>Primeiro, seu prato</h2>
         <div class="cards" data-identifier="dishes">
-          <div class="cards__item checked" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
             <p class="legend">Um pouco de batata, um pouco de salada</p>
@@ -34,7 +34,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
             <p class="legend">Um pouco de batata, um pouco de salada</p>
@@ -42,7 +42,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
             <p class="legend">Um pouco de batata, um pouco de salada</p>
@@ -55,7 +55,7 @@
       <section>
         <h2>Agora, sua bebida</h2>
         <div class="cards" data-identifier="drinks">
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/coquinha_gelada.png" alt="Coquinha gelada" />
             <h3 class="title" data-identifier="food-title">Coquinha Gelada</h3>
             <p class="legend">Lata 350ml</p>
@@ -63,7 +63,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/coquinha_gelada.png" alt="Coquinha gelada" />
             <h3 class="title" data-identifier="food-title">Coquinha Gelada</h3>
             <p class="legend">Lata 350ml</p>
@@ -71,7 +71,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/coquinha_gelada.png" alt="Coquinha gelada" />
             <h3 class="title" data-identifier="food-title">Coquinha Gelada</h3>
             <p class="legend">Lata 350ml</p>
@@ -84,7 +84,7 @@
       <section>
         <h2>Por fim, sua sobremesa</h2>
         <div class="cards" data-identifier="desserts">
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/pudim.png" alt="Pudim" />
             <h3 class="title" data-identifier="food-title">Pudim</h3>
             <p class="legend">Apenas pudim</p>
@@ -92,7 +92,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/pudim.png" alt="Pudim" />
             <h3 class="title" data-identifier="food-title">Pudim</h3>
             <p class="legend">Apenas pudim</p>
@@ -100,7 +100,7 @@
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
 
-          <div class="cards__item" data-identifier="food-option">
+          <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/pudim.png" alt="Pudim" />
             <h3 class="title" data-identifier="food-title">Pudim</h3>
             <p class="legend">Apenas pudim</p>
@@ -122,7 +122,9 @@
       </div>
     </footer>
 
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
