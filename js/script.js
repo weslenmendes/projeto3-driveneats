@@ -1,4 +1,4 @@
-let dishes, drinks, desserts;
+let dishes, drinks, desserts, totalSum;
 
 function fillOrderVariables(attribute, e) {
   if (attribute === 'dishes') {
@@ -14,7 +14,8 @@ function checkIfOrdersAreMarked() {
   if (dishes && drinks && desserts) {
     const btn = document.querySelector(".btn");
     btn.classList.remove("disabled");
-    btn.innerText = "Fazer pedido";
+    btn.removeAttribute("disabled");
+    btn.innerText = "Fechar pedido";
   }
 }
 
@@ -48,23 +49,35 @@ function makeOrder() {
   
       if (index === 0) {
         title.innerText = dishes.querySelector(".title").innerText;
-        price.innerText = dishes.querySelector(".value").innerText;
+        price.innerText = dishes.querySelector(".value").innerText.split(" ")[1];
       } else if (index === 1) {
         title.innerText = drinks.querySelector(".title").innerText;
-        price.innerText = drinks.querySelector(".value").innerText;
+        price.innerText = drinks.querySelector(".value").innerText.split(" ")[1];
       } else {
         title.innerText = desserts.querySelector(".title").innerText;
-        price.innerText = desserts.querySelector(".value").innerText;
+        price.innerText = desserts.querySelector(".value").innerText.split(" ")[1];
       }
 
-      total += parseFloat(price.innerText.split(" ")[1].replace(",", "."));
+      total += parseFloat(price.innerText.replace(",", "."));
     });
 
+    totalSum = total.toFixed(2);
     total = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     sum.innerText = total;
   
     modal.classList.add("show");
   }
+}
+
+function sendOrderToWhatsapp() {
+  const nome = prompt("Qual é o seu nome?");
+  const endereco = prompt("Qual é o seu endereço?");
+  let msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${dishes.children[1].innerText}\n- Bebida: ${drinks.children[1].innerText}\n- Sobremesa: ${desserts.children[1].innerText}\nTotal: R$ ${totalSum}\n\nNome: ${nome}\nEndereço: ${endereco}\n
+  `;
+
+  msg = window.encodeURIComponent(msg); 
+  
+  window.open(`https://wa.me/5584981018236?text=${msg}`, "_blank");
 }
 
 function closeModal() {
