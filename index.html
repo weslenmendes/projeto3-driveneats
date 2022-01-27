@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -111,14 +112,37 @@
       </section>
     </main>
 
-    <div class="modal"></div>
+    <aside class="modal show">
+      <section>
+        <h2 class="modal__title">Confirme seu pedido</h2>
+        <div class="modal__items">
+          <div class="modal__item">
+            <p class="modal__item-title">Frango Yin Yang</p>
+            <p class="modal__item-price">R$ 14,90</p>
+          </div>
+          <div class="modal__item">
+            <p class="modal__item-title">Coquinha gelada</p>
+            <p class="modal__item-price">R$ 4,90</p>
+          </div><div class="modal__item">
+            <p class="modal__item-title">Pudim</p>
+            <p class="modal__item-price">R$ 7,90</p>
+          </div>
+          <div class="modal__sum">
+            <p class="modal__item-title">TOTAL</p>
+            <p class="modal__item-price">R$ 27,70</p>
+          </div>
+        </div>
+        <button class="modal__button">Tudo certo, pode pedir!</button>
+        <button class="modal__cancel">Cancelar</button>
+      </section>
+    </aside>
 
     <footer>
       <div>
-        <a href="#" class="btn disabled">
+        <button class="btn disabled">
           Selecione os 3 itens <br />
           para fechar o pedido
-        </a>
+        </button>
       </div>
     </footer>
 

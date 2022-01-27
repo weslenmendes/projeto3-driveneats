@@ -1,0 +1,125 @@
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0;
+}
+
+.modal.show {
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal.show section {
+  background-color: #50d074;
+  color: #fff;
+  font-size: 22px;
+  padding: 21px 26px;
+  margin: 0 19px;
+  border-radius: 9px;
+  width: 100%;
+  max-width: 353px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal__title {
+  margin-top: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.modal__items {
+  margin-top: 15px;
+}
+
+.modal__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.modal__sum {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-top: 13px;
+}
+
+.modal__button {
+  background-color: #fff;
+  color: #50d074;
+  height: 52px;
+  width: 100%;
+  border-radius: 100px;
+  margin-top: 24px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  animation: all 0.3s ease-in-out;
+}
+
+.modal__cancel {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-top: 13px;
+  cursor: pointer;
+  animation: all 0.3s ease-in-out;
+}
+
+.modal__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transform: scale(1.02);
+}
+
+.modal__cancel:hover {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 390px) {
+  .modal__title {
+    font-size: 22px;
+  }
+
+  .modal__items,
+  .modal__button,
+  .modal__cancel {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__items,
+  .modal__button,
+  .modal__cancel {
+    font-size: 14px;
+  }
+}
