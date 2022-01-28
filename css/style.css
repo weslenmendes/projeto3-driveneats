@@ -53,24 +53,19 @@ main {
   margin-top: 123px;
   margin-bottom: 108px;
   min-width: 290px;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-}
-
-section {
-  padding-left: 21px;
 }
 
 section h2 {
   font-size: 26px;
   color: #333;
+  padding-left: 19px;
 }
 
 .cards {
-  margin-top: 17px;
-  margin-bottom: 12px;
-  padding-bottom: 15px;
-  padding-right: 19px;
+  margin: 17px 0 12px 0;
+  padding: 0 0 15px 19px;
   overflow-x: scroll;
   overflow-y: hidden;
   height: 100%;
@@ -87,6 +82,10 @@ section h2 {
 
 .cards .cards__item:first-child {
   margin-left: 0;
+}
+
+.cards .cards__item:last-child {
+  margin-right: 19px;
 }
 
 .cards__item {
