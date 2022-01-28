@@ -29,7 +29,7 @@
     <main>
       <section>
         <h2>Primeiro, seu prato</h2>
-        <div class="cards" data-identifier="dishes">
+        <article class="cards" data-identifier="dishes">
           <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/dishes/frango_yin_yang.png" alt="Frango Yin Yang" />
             <h3 class="title" data-identifier="food-title">Frango Yin Yang</h3>
@@ -53,12 +53,12 @@
             <p class="value" data-identifier="food-price">R$ 13,90</p>
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
-        </div>
+        </article>
       </section>
 
       <section>
         <h2>Agora, sua bebida</h2>
-        <div class="cards" data-identifier="drinks">
+        <article class="cards" data-identifier="drinks">
           <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/drinks/coquinha_gelada.png" alt="Coquinha gelada" />
             <h3 class="title" data-identifier="food-title">Coquinha Gelada</h3>
@@ -82,12 +82,12 @@
             <p class="value" data-identifier="food-price">R$ 3,90</p>
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
-        </div>
+        </article>
       </section>
 
       <section>
         <h2>Por fim, sua sobremesa</h2>
-        <div class="cards" data-identifier="desserts">
+        <article class="cards" data-identifier="desserts">
           <div class="cards__item" data-identifier="food-option" onclick="takeOrders(this)">
             <img src="assets/desserts/pudim.png" alt="Pudim" />
             <h3 class="title" data-identifier="food-title">Pudim</h3>
@@ -111,7 +111,7 @@
             <p class="value" data-identifier="food-price">R$ 9,90</p>
             <ion-icon class="icon" name="checkmark-circle"></ion-icon>
           </div>
-        </div>
+        </article>
       </section>
     </main>
 
@@ -120,21 +120,26 @@
         <h2 class="modal__title">Confirme seu pedido</h2>
         <div class="modal__items">
           <div class="modal__item">
-            <p class="modal__item-title">Frango Yin Yang</p>
-            <p class="modal__item-price">R$ 14,90</p>
+            <p class="modal__item-title"></p>
+            <p class="modal__item-price"></p>
           </div>
+
           <div class="modal__item">
-            <p class="modal__item-title">Coquinha gelada</p>
-            <p class="modal__item-price">R$ 4,90</p>
-          </div><div class="modal__item">
-            <p class="modal__item-title">Pudim</p>
-            <p class="modal__item-price">R$ 7,90</p>
+            <p class="modal__item-title"></p>
+            <p class="modal__item-price"></p>
           </div>
+
+          <div class="modal__item">
+            <p class="modal__item-title"></p>
+            <p class="modal__item-price"></p>
+          </div>
+
           <div class="modal__sum">
             <p class="modal__item-title">TOTAL</p>
             <p class="modal__item-price">R$ 27,70</p>
           </div>
         </div>
+
         <button class="modal__button" onclick="sendOrderToWhatsapp()">Tudo certo, pode pedir!</button>
         <button class="modal__cancel" onclick="closeModal()">Cancelar</button>
       </section>

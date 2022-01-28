@@ -71,13 +71,6 @@ section h2 {
   height: 100%;
 
   display: flex;
-
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-}
-
-.cards::-webkit-scrollbar {
-  display: none;
 }
 
 .cards .cards__item:first-child {
