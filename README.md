@@ -22,11 +22,11 @@ A aplicação consiste em um site mobile de um aplicativo de entrega de comida, 
 Primeiro, faça o clone do repositório, com o comando abaixo:
 
 ```bash
-git clone https://github.com/weslenmendes/projeto3-driveneats.git
+$ git clone https://github.com/weslenmendes/projeto3-driveneats.git
 ```
 
 Após finalizar o processo anterior, entre na pasta criada, e abra o arquivo **index.html** em um navegador.
 
 ---
 
-<p style="text-align: center">Feito com 💜 por <a href="https://github.com/weslenmendes">Weslen Mendes</a></p>
+<p align="center">Feito com 💜 por <a href="https://github.com/weslenmendes">Weslen Mendes</a></p>
