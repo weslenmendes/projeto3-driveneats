@@ -3,10 +3,10 @@ let dishes = null,
   desserts = null,
   totalSum = null;
 
-function fillOrderVariables(attribute, e) {
-  if (attribute === "dishes") {
+function fillOrderVariables(e, foodOption) {
+  if (foodOption === "dishes") {
     dishes = e;
-  } else if (attribute === "drinks") {
+  } else if (foodOption === "drinks") {
     drinks = e;
   } else {
     desserts = e;
@@ -22,19 +22,17 @@ function checkIfOrdersAreMarked() {
   }
 }
 
-function takeOrders(e) {
-  const attribute = e.parentElement.getAttribute("data-identifier");
+function takeOrders(e, foodOption) {
+  const section = document.querySelector(`[data-identifier="${foodOption}"]`);
+  const selected = section.querySelector(".checked");
 
-  const section = document.querySelector(`[data-identifier="${attribute}"]`);
-  const foods = section.querySelectorAll('[data-identifier="food-option"]');
-
-  foods.forEach((food) => {
-    food.classList.remove("checked");
-  });
+  if (selected !== null) {
+    selected.classList.remove("checked");
+  }
 
   e.classList.add("checked");
 
-  fillOrderVariables(attribute, e);
+  fillOrderVariables(e, foodOption);
   checkIfOrdersAreMarked();
 }
 
@@ -71,11 +69,10 @@ function makeOrder() {
     });
 
     totalSum = total.toFixed(2);
-    total = total.toLocaleString("pt-br", {
+    sum.innerText = total.toLocaleString("pt-br", {
       style: "currency",
       currency: "BRL",
     });
-    sum.innerText = total;
 
     modal.classList.add("show");
   }
